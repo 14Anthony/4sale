@@ -10,7 +10,7 @@ const shopRoutes = require('./routes/shop');
 
 app.use(bodyParser.urlencoded({ extend: false }));
 
-app.use(adminRoutes);
+app.use('/admin', adminRoutes);
 
 
 
@@ -19,7 +19,7 @@ app.use(adminRoutes);
 
 app.use(shopRoutes);
 
-app.use(req, res, next)=> {
+app.use((req, res, next) => {
     res.status().send('<h3> THERE ARE NO STUDENTS HERE????  THINKIN OF AN ERRO PAGE????????</h3>')
 }
 
