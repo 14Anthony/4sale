@@ -1,5 +1,6 @@
-const http = require('http');
+// const http = require('http');
 const express = require('express');
+// so it says that body parser is now deprecated???????????still working.
 const bodyParser = require('body-parser');
 
 const app = express();
@@ -10,11 +11,17 @@ const shopRoutes = require('./routes/shop');
 app.use(bodyParser.urlencoded({ extend: false }));
 
 app.use(adminRoutes);
-//SO I AM THINKING WE MIGHT HAVE ADMIN ROUTES FOR JUST ADMINISTRATION AND HAVING REACT FOR THE FRONT END OFCOURSE< BUT IS REACT USED FOR BOTH???????
+
+
+
+//SO I AM THINKING WE MIGHT HAVE ADMIN ROUTES FOR JUST ADMINISTRATION AND HAVING REACT FOR THE FRONT END OFCOURSE< BUT IS REACT USED FOR BOTH???????  somehow apart of the tokens piece ZZACHA????
+
 
 app.use(shopRoutes);
 
-
+app.use(req, res, next)=> {
+    res.status().send('<h3> THERE ARE NO STUDENTS HERE????  THINKIN OF AN ERRO PAGE????????</h3>')
+}
 
 app.listen(3000)
 
