@@ -10,6 +10,8 @@ const shopRoutes = require('./routes/shop');
 app.use(bodyParser.urlencoded({ extend: false }));
 
 app.use(adminRoutes);
+//SO I AM THINKING WE MIGHT HAVE ADMIN ROUTES FOR JUST ADMINISTRATION AND HAVING REACT FOR THE FRONT END OFCOURSE< BUT IS REACT USED FOR BOTH???????
+
 app.use(shopRoutes);
 
 
