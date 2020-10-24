@@ -6,4 +6,11 @@ router.get('/add-product', (req, res, next) => {
     console.log("ADD PRODUCT PAGE FOR ZACH?TRAVIS?FRANK?");
     res.send(' <form action="/product" method = "POST"><input type ="text" name="title"><button type="submit">ADD PRODUCT</button></input><form>');
 
-})
+});
+
+router.post('/product', (req, res, next) => {
+    console.log(req.body);
+    res.redirect('/');
+});
+
+module.exports = router;
